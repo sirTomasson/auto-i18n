@@ -14,7 +14,8 @@
   },
   "files": ["build", "cli.js", "system_prompt.txt"],
   "keywords": ["i18n", "auto-i18n", "translations"],
-  "author": "",
+  "author": "sirTomassen",
+  "repository": "https://github.com/sirTomasson/auto-i18n",
   "license": "ISC",
   "devDependencies": {
     "@jest/globals": "^29.6.2",
