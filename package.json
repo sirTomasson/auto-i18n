@@ -1,6 +1,6 @@
 {
   "name": "@sirtomasson/auto-i18n",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Automated i18n translations from one input file",
   "main": "main.js",
   "scripts": {
