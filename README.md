@@ -22,5 +22,8 @@ To compile:
 npm run build
 ```
 ## PUB
+```
+npm publish --access=public
+```
 
 ## TODO
