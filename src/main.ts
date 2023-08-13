@@ -3,7 +3,7 @@ import {OpenAITranslator} from './translator/openai_translator';
 import {readdirSync, readFileSync, writeFileSync} from 'fs';
 import {config as dotenvConfig} from 'dotenv';
 import {IStringIndex, objComplement, patchObj} from './diff'
-import {dirOf} from "./util";
+import {dirOf, tryReadFile} from "./util";
 
 dotenvConfig();
 
@@ -21,12 +21,17 @@ if (!inputPath) {
 
 let outDir = process.argv[3];
 
-const config = new Configuration({
-  apiKey: process.env.OPENAI_API_KEY
+const config =new Configuration({
+    apiKey: process.env.OPENAI_API_KEY,
 });
 
+
 const openAiApi = new OpenAIApi(config);
-const openTranslator = new OpenAITranslator(openAiApi);
+const systemPromptTxt = tryReadFile('./system_prompt.txt');
+if (systemPromptTxt) {
+  console.log('[INFO] Using contents of system_prompt.txt for OpenAI system prompt')
+}
+const openTranslator = new OpenAITranslator(openAiApi, systemPromptTxt);
 
 const langCodeLangMap: IStringIndex = {
   'nl': 'Dutch',
