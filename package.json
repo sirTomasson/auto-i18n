@@ -1,7 +1,7 @@
 {
   "name": "@sirtomasson/auto-i18n",
   "version": "0.0.2",
-  "description": "Automated i18n translations from one input file",
+  "description": "Automated i18n translations from one input file, using OpenAI's GPT.",
   "main": "main.js",
   "scripts": {
     "build": "rm -rf ./build && ./node_modules/typescript/bin/tsc",

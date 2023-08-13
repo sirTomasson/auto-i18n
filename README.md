@@ -1,7 +1,10 @@
 # 🤖🏳️‍🌈AUTO i18n
-Automated i18n translations from one input file.
+Automated i18n translations from one input file, using OpenAI's GPT.
 
 ## USAGE
+First place `OPENAI_API_KEY=<your-api-key>` in `.env`.
+
+Then run:
 ```
 npm auto-i18n <path-to-i18n-input-file> <path-to-output-dir>
 ```
