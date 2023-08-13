@@ -1,0 +1,32 @@
+{
+  "name": "@sirtomasson/auto-i18n",
+  "version": "0.0.1",
+  "description": "Automated i18n translations from one input file",
+  "main": "main.js",
+  "scripts": {
+    "build": "rm -rf ./build && ./node_modules/typescript/bin/tsc",
+    "test": "jest",
+    "dev": "npx ts-node ./src/main.ts",
+    "prod": "node ./build/main.js"
+  },
+  "bin": {
+    "auto-i18n": "cli.js"
+  },
+  "files": ["build", "cli.js"],
+  "keywords": ["i18n", "auto-i18n", "translations"],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@jest/globals": "^29.6.2",
+    "@types/jest": "^29.5.3",
+    "@types/node": "^20.4.7",
+    "json-diff": "^1.0.6",
+    "ts-jest": "^29.1.1",
+    "typescript": "^5.1.6"
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "jsondiffpatch": "^0.4.1",
+    "openai": "^3.3.0"
+  }
+}

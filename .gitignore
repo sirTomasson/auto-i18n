@@ -1,0 +1,5 @@
+.env
+build/
+.idea/
+examples/
+node_modules/

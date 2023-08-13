@@ -1,0 +1,10 @@
+#!/bin/bash
+set -e
+
+DEFAULT_FILE="assets/i18n/patched/nl.json"
+FILES=assets/i18n/patched/*
+
+for FILE in $FILES
+do
+  json-diff $DEFAULT_FILE $FILE -k
+done
