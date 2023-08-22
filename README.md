@@ -2,7 +2,11 @@
 Automated i18n translations from one input file, using OpenAI's GPT.
 
 ## USAGE
-First place `OPENAI_API_KEY=<your-api-key>` in `.env`.
+
+```
+npm add --save-dev @sirtomasson/auto-i18n
+```
+Set `OPENAI_API_KEY=<your-api-key>` in `.env`.
 
 Then run:
 ```
@@ -30,3 +34,6 @@ npm publish --access=public
 ```
 
 ## TODO
+
+- [ ] Add more supported languages
+- [ ] Allow user to set which OpenAI model is being used
